@@ -68,6 +68,34 @@ public class Adresse {
         System.out.print("  Quel est la province?");
         province = sc.next();
         System.out.print("  Quel est le pays?");
-       pays = sc.next();
+        pays = sc.next();
+    }
+    public void ModAdresse(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Adresse\n");
+        System.out.print("  Quel est le numero civic("+ numCivique +")?");
+        if(sc.next().toUpperCase() != "NA") {
+            numCivique = sc.next();
+        }
+        System.out.print("  Quel est le nom de rue("+ numCivique +")?");
+        if(sc.next().toUpperCase() != "NA") {
+            rue = sc.next();
+        }
+        System.out.print("  Quel est l'appartement("+ numCivique +")?");
+        if(sc.next().toUpperCase() != "NA") {
+            appartement = sc.next();
+        }
+        System.out.print("  Quel est la ville("+ numCivique +")?");
+        if(sc.next().toUpperCase() != "NA") {
+            ville = sc.next();
+        }
+        System.out.print("  Quel est la province("+ numCivique +")?");
+        if(sc.next().toUpperCase() != "NA") {
+            province = sc.next();
+        }
+        System.out.print("  Quel est le pays("+ numCivique +")?");
+        if(sc.next().toUpperCase() != "NA") {
+            pays = sc.next();
+        }
     }
 }

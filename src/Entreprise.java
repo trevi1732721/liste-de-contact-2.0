@@ -31,4 +31,15 @@ public class Entreprise {
         adresseEntreprise.NewAdresse();
 
     }
+    public void ModEntreprise() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("L'entreprise");
+        System.out.print("  Quel est le nom de l'entreprise("+nom+")?");
+        if(sc.next().toUpperCase() != "NA") {
+            nom = sc.next();
+        }
+        adresseEntreprise.ModAdresse();
+
+    }
+
 }

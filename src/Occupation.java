@@ -29,4 +29,12 @@ public class Occupation {
         poste = sc.next();
         entreprise.NewEntreprise();
     }
+    public void ModOccupation() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("  Quel est l'emplois du contact("+poste+")?");
+        if(sc.next().toUpperCase() != "NA") {
+            poste = sc.next();
+        }
+        entreprise.ModEntreprise();
+    }
 }

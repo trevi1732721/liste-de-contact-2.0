@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Created by TreVi1732721 on 2018-01-22.
  */
@@ -21,6 +23,10 @@ public class Telephone {
     }
 
     public void NewTelephone() {
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Quel est le type de numero de téléphone?");
+        information = sc.next();
+        System.out.println("Quel est le numero de téléphone?");
+        information = sc.next();
     }
 }
