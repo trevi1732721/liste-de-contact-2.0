@@ -37,4 +37,8 @@ public class Occupation {
         }
         entreprise.ModEntreprise();
     }
+    public void PrintOccupation(){
+        System.out.println("    poste : "+ poste);
+        entreprise.PrintEntreprise();
+    }
 }

@@ -13,6 +13,7 @@ public class Main {
         boolean run = true;
         Scanner sc = new Scanner(System.in);
         int nbContact = 0;
+        int choix = 0;
        while(run){
            System.out.println("Que voulez vous faire?" +
                    "\n1- Nouveau contact" +
@@ -26,11 +27,27 @@ public class Main {
                    break;
                case 2:
                    for (int i=0; i>=nbContact; i++) {
-                       //Still have to fo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                       System.out.println("___________________________________");
+                       System.out.println("Contact "+ i );
+                       listeContact.get(i).PrintContact();
+                       System.out.println("___________________________________");
                    }
 
                    break;
                case 3:
+                   System.out.println("Que voulez vous faire?" +
+                           "\n 1- modifier un contact" +
+                           "\n 2- ajouter un numero");
+                   choix = sc.nextInt();
+                   if(choix==1){
+                       System.out.println("Quel est le numero du contact à modifier?");
+                       choix = sc.nextInt();
+                       listeContact.get(choix).ModContact();
+                   }else if(choix==2){
+                       System.out.println("Ajouter un numero a quel contact?");
+                       choix = sc.nextInt();
+                       listeContact.get(choix).NewTelephone();
+                   }
                    break;
                case 4:
                    break;
@@ -40,6 +57,6 @@ public class Main {
                    break;
            }
            nouveauContact.NewContact();
-       }
+       }//while run
     }
 }

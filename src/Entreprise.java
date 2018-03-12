@@ -41,5 +41,10 @@ public class Entreprise {
         adresseEntreprise.ModAdresse();
 
     }
+    public void PrintEntreprise(){
+        System.out.println("Entreprise" +
+                "\n     "+ nom);
+        adresseEntreprise.PrintAdresse();
+    }
 
 }

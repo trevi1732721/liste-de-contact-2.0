@@ -77,25 +77,33 @@ public class Adresse {
         if(sc.next().toUpperCase() != "NA") {
             numCivique = sc.next();
         }
-        System.out.print("  Quel est le nom de rue("+ numCivique +")?");
+        System.out.print("  Quel est le nom de rue("+ rue +")?");
         if(sc.next().toUpperCase() != "NA") {
             rue = sc.next();
         }
-        System.out.print("  Quel est l'appartement("+ numCivique +")?");
+        System.out.print("  Quel est l'appartement("+ appartement +")?");
         if(sc.next().toUpperCase() != "NA") {
             appartement = sc.next();
         }
-        System.out.print("  Quel est la ville("+ numCivique +")?");
+        System.out.print("  Quel est la ville("+ ville +")?");
         if(sc.next().toUpperCase() != "NA") {
             ville = sc.next();
         }
-        System.out.print("  Quel est la province("+ numCivique +")?");
+        System.out.print("  Quel est la province("+ province +")?");
         if(sc.next().toUpperCase() != "NA") {
             province = sc.next();
         }
-        System.out.print("  Quel est le pays("+ numCivique +")?");
+        System.out.print("  Quel est le pays("+ pays +")?");
         if(sc.next().toUpperCase() != "NA") {
             pays = sc.next();
         }
+    }
+    public void PrintAdresse(){
+        System.out.println("    numero civique : "+ numCivique+
+        "\n"+ "     rue : "+rue+
+        "\n"+ "     appartement : "+appartement+
+        "\n"+ "     ville : "+ville+
+        "\n"+ "     privince : "+province+
+        "\n"+ "     pays : "+ pays);
     }
 }

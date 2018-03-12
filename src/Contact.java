@@ -56,17 +56,7 @@ public class Contact {
         nom=sc.next();
         adresse.NewAdresse();
         occupation.NewOccupation();
-        while(choix){
-            nouveau.NewTelephone();
-            numTélephone.add(i,nouveau);
-            i++;
-            System.out.print("  Voulez-vous ajouter un numero de téléphone?" +
-                    "\n 1-oui" +
-                    "\n 2-non\n");
-            if(sc.nextInt()== 2){
-                choix = false;
-            }
-        }
+        NewTelephone();
     }
     public void ModContact(){
         Scanner sc = new Scanner(System.in);
@@ -81,5 +71,24 @@ public class Contact {
         }
         adresse.ModAdresse();
         occupation.ModOccupation();
+    }
+    public void PrintContact(){
+        System.out.println("    nom : "+prenom +" "+nom );
+        adresse.PrintAdresse();
+        occupation.PrintOccupation();
+    }
+    public void NewTelephone(){
+        Telephone nouveau = new Telephone();
+        boolean choix = true;
+        Scanner sc = new Scanner(System.in);
+        while(choix){
+            numTélephone.add(1,nouveau);
+            System.out.print("  Voulez-vous ajouter un numero de téléphone?" +
+                    "\n 1-oui" +
+                    "\n 2-non\n");
+            if(sc.nextInt()== 2){
+                choix = false;
+            }
+        }
     }
 }
