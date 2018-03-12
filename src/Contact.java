@@ -76,13 +76,18 @@ public class Contact {
         System.out.println("    nom : "+prenom +" "+nom );
         adresse.PrintAdresse();
         occupation.PrintOccupation();
+        for (Telephone telephone:numTélephone) {
+            System.out.print(telephone.getInformation() + " - ");
+            telephone.getNumero();
+        }
     }
     public void NewTelephone(){
         Telephone nouveau = new Telephone();
         boolean choix = true;
         Scanner sc = new Scanner(System.in);
         while(choix){
-            numTélephone.add(1,nouveau);
+            nouveau.NewTelephone();
+            numTélephone.add(0,nouveau);
             System.out.print("  Voulez-vous ajouter un numero de téléphone?" +
                     "\n 1-oui" +
                     "\n 2-non\n");
@@ -90,5 +95,20 @@ public class Contact {
                 choix = false;
             }
         }
+    }
+    public void ModTelephone(){
+        int choix =0;
+        for (Telephone telephone:numTélephone) {
+            int i = 1;
+            System.out.print(i + " - ");
+            telephone.getNumero();
+            i++;
+        }
+        System.out.println("quel est le numero a modifier?");
+        Scanner sc = new Scanner(System.in);
+        choix = sc.nextInt();
+        Telephone nouveau = new Telephone();
+            numTélephone.set(choix,nouveau);
+
     }
 }

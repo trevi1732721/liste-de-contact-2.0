@@ -23,6 +23,7 @@ public class Main {
                    "\n5- effacer un contact");
            switch(sc.nextInt()){
                case 1:
+                   nouveauContact.NewContact();
                    listeContact.put(1,nouveauContact);
                    break;
                case 2:
@@ -40,9 +41,9 @@ public class Main {
                            "\n 2- ajouter un numero");
                    choix = sc.nextInt();
                    if(choix==1){
-                       System.out.println("Quel est le numero du contact à modifier?");
+                       System.out.println("modifier quel numero de contact?");
                        choix = sc.nextInt();
-                       listeContact.get(choix).ModContact();
+                       listeContact.get(choix).ModTelephone();
                    }else if(choix==2){
                        System.out.println("Ajouter un numero a quel contact?");
                        choix = sc.nextInt();
@@ -50,13 +51,18 @@ public class Main {
                    }
                    break;
                case 4:
+                   System.out.println("Quel est le numero du contact à modifier?");
+                   choix = sc.nextInt();
+                   listeContact.get(choix).ModContact();
                    break;
                case 5:
+                   System.out.print("Quel est le contact à effacer?");
+                   choix = sc.nextInt();
+                   listeContact.remove(choix);
                    break;
                default:
                    break;
            }
-           nouveauContact.NewContact();
        }//while run
     }
 }
